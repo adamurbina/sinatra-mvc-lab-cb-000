@@ -7,8 +7,10 @@ class PigLatinizer
             pig = orig.join + "way"
         else
             suffix = ''
-            while true
-                if 
+            orig.each do |char|
+                break if 'aeiouAEIOU'.include?char
+                suffix = suffix + char
+                
             end
         end
 
