@@ -6,7 +6,10 @@ class PigLatinizer
         if 'aeiouAEIOU'.include?orig[0]
             pig = orig.join + "way"
         else
-            
+            suffix = ''
+            while true
+                if 
+            end
         end
 
         pig
