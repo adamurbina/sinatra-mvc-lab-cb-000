@@ -7,11 +7,16 @@ class PigLatinizer
             pig = orig.join + "way"
         else
             suffix = ''
-            orig.each do |char|
-                break if 'aeiouAEIOU'.include?char
-                suffix = suffix + char
-                
+            orig.each_with_index do |char, index|
+                if 'aeiouAEIOU'.include?(char)
+                    pig = orig[index..-1]
+                    break
+                else
+                    suffix = suffix + char
+                end
+
             end
+            pig = pig + suffix + "ay"
         end
 
         pig
