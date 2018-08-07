@@ -9,7 +9,7 @@ class PigLatinizer
             suffix = ''
             orig.each_with_index do |char, index|
                 if 'aeiouAEIOU'.include?(char)
-                    pig = orig[index..-1]
+                    pig = orig[index..-1].join
                     break
                 else
                     suffix = suffix + char
