@@ -27,5 +27,4 @@ class PigLatinizer
         end
         pig
     end
-
 end
