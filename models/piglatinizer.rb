@@ -4,7 +4,7 @@ class PigLatinizer
         word_array = phrase.split(" ")
         word_array.collect do |word|
             pigword(word)
-        end
+        end.join(" ")
     end
 
     def pigword(word)
