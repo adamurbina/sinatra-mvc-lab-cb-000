@@ -1,6 +1,13 @@
 class PigLatinizer
 
-    def piglatinize(word)
+    def piglatinize(phrase)
+        word_array = phrase.split(" ")
+        word_array.collect do |word|
+            pigword(word)
+        end
+    end
+
+    def pigword(word)
         orig = word.split('')
         pig = ''
         if 'aeiouAEIOU'.include?orig[0]
@@ -18,7 +25,6 @@ class PigLatinizer
             end
             pig = pig + suffix + "ay"
         end
-
         pig
     end
 
